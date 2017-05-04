@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private final String GUARDIAN_REQUEST_URL = "http://content.guardianapis.com/search?q=debates&api-key=test";
     private NewsAdapter mAdapter;
     Button updateButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             }
         });
     }
+
     @Override
     public Loader<List<News>> onCreateLoader(int i, Bundle bundle) {
         return new NewsLoader(this, GUARDIAN_REQUEST_URL);
@@ -70,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         mAdapter.clear();
     }
 
-    private void updateNews(){
+    private void updateNews() {
         ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();

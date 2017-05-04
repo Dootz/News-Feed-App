@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:text="UPDATE"
         android:layout_margin="10dp"
-        android:id="@+id/updateBT"/>
+        android:id="@+id/updateBT" />
+
     <ListView
         android:id="@+id/list"
         android:orientation="vertical"
